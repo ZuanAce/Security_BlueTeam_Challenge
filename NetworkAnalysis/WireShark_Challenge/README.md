@@ -125,4 +125,4 @@ In this activity, you’ll be putting your new Wireshark skills to the test by a
    - Discover the presence of a file named "LogFile.log" in the Desktop directory at 4:51am.
      ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/32dd895d-eeb0-4833-9cec-564620e95544)
 
-#Thanks for Reading!!
+# Thanks for Reading!!
