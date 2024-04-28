@@ -85,6 +85,11 @@ Explore the last post for coordinates and date:
 - Date: 31 Oct 20XX
 
 This approach is sufficient enough to answer all the quiz questions presented in the challenge
+# Tools Used:
+- Google Lens
+- Cyberchef
+- Tor Browser
+  
 # Thanks for reading!!
 
 
