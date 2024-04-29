@@ -71,9 +71,12 @@ In this activity you’ll be putting your new TCPDump skills to the test by anal
 
 5. When was a packet with a TCP checksum value of 53203 captured?
 
-   This networking challenge that had me stumped until I switched from Tcpdump to Wireshark. 
-
-
+   Facing a networking challenge, I hit a roadblock until I made the switch from Tcpdump to Wireshark:
+   - Input tcp.checksum == 53203 into the display filter.
+   - The packet arrived on Feb 10, 2020, at 19:04:46.207925000 +08.
+   - Converting to UTC yields Feb 10, 2020, at 11:04:46.207925000.
+   - Converting further to EST gives Feb 10, 2020, at 06:04:46.207925000.
+     
    ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/70a102c8-ac12-4fdf-b25e-2d1993d01457)
    
    
