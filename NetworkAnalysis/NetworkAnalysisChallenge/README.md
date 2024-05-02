@@ -15,14 +15,14 @@ Alexis is a fictional cybersecurity company with thousands of employees. An atta
    
    **Packet Inspection:**
    - Reviewed packet 765 on the main screen, focusing on Ethernet details.
-   - Attacker's MAC Address: 08:00:27:3d:27:5d
+   - *Attacker's MAC Address: 08:00:27:3d:27:5d*
      
      ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/f436695b-2c3e-45ac-91d9-b95ac2139018)
 
 2. What is the type of attack which is taking place that allows the attacker to listen in on conversations between the central server and another host?
 
    - Just a simple google search will find the answer
-   - Man-in-the-Middle
+   - *Man-in-the-Middle*
      
 3. What is the file which was downloaded from the central server?
 
@@ -36,7 +36,7 @@ Alexis is a fictional cybersecurity company with thousands of employees. An atta
    **FTP Packet Inspection:**
    - Returned to the main screen and applied an FTP filter using ftp in the display filter.
    - Selected packet 550 and followed the TCP stream.
-   - File Name: Alevis_Employee_Information_Chart.csv
+   - *File Name: Alevis_Employee_Information_Chart.csv*
      
      ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/c98c92e4-22e4-4454-a140-9383dafd4442)
 
@@ -52,7 +52,7 @@ Alexis is a fictional cybersecurity company with thousands of employees. An atta
    
    **Department Search:**
    - Conducted a search within the CSV file for the keyword "Borden" to identify his department information.
-   - Sales
+   - *Sales*
      
      ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/56cd6cf7-422c-486b-a134-0415ccfec64f)
 
@@ -60,7 +60,7 @@ Alexis is a fictional cybersecurity company with thousands of employees. An atta
 
    **Admin Search:**
    - Conducted a search within the CSV file for the keyword "Admin" to identify the SSH password.
-   - Password is gMR<4eXf]e6W
+   - Password is *gMR<4eXf]e6W*
      
      ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/3238dca4-f89f-4abd-acb6-7f67d85e4315)
 
