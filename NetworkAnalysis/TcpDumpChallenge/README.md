@@ -73,16 +73,15 @@ In this activity you’ll be putting your new TCPDump skills to the test by anal
 
    I gave up using tcpdump commands and switched to Wireshark to find the solution instead
    - Input tcp.checksum == 53203 into the display filter.
-   - The packet arrived on Feb 10, 2020, at 19:04:46.207925000 +08.
-   - Converting to UTC yields Feb 10, 2020, at 11:04:46.207925000.
+   - Arrival Time: Feb 10, 2020 19:04:46.207925000 Malay Peninsula Standard Time
+   - UTC Arrival Time: Feb 10, 2020 11:04:46.207925000 UTC
    - Converting further to EST gives Feb 10, 2020, at 06:04:46.207925000.
-     
-   ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/70a102c8-ac12-4fdf-b25e-2d1993d01457)
-   
-   
+   *NOTES*
+    - Converted to EST because the creator of this challenge is from United States
+    - EST stands for Eastern Standard Time, which is a time zone used in the United States. It is typically observed in states such as New York, Florida, and parts of the Eastern United States.
 
-
-    
+      ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/f7eeb806-2385-44bf-84d8-2220e210cc25)
+   
   
 
 # Thanks for Reading!!
