@@ -12,7 +12,7 @@ Some of my goals throughout the course include:
 Some of the tools that I used:
 - Maltego 
 - theHarvester 
-- Tweetdeck 
+- Tweetdeck (No longer free and switched to XPro)
 - Google Dorks 
 - OSINT Framework
 - TinEye
