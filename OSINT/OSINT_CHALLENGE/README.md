@@ -1,5 +1,5 @@
 # Challenge Scenario and Details
-You work for a law enforcement organisation, and you have been assigned to track a person-of-interest, that is believed to be associated with a hacking group that recently compromised a Managed Service Provider (MSP) and are trying to sell the stolen credentials on both the clear net and dark web. Another team is focusing on the dark web lead, so you have been tasked with using OSINT sources to build up a profile on the individual and attempt to locate any evidence that links them to the MSP breach and sale of account details. You have been provided with some information to start your investigation. You should use any of the sources or tools taught in this course, that you deem to be applicable and appropriate. We know that the email address used to register the Twitter account is fake, so do not include this in your report.
+You work for a law enforcement organisation, and you have been assigned to track a person-of-interest (POI), that is believed to be associated with a hacking group that recently compromised a Managed Service Provider (MSP) and are trying to sell the stolen credentials on both the clear net and dark web. Another team is focusing on the dark web lead, so you have been tasked with using OSINT sources to build up a profile on the individual and attempt to locate any evidence that links them to the MSP breach and sale of account details. You have been provided with some information to start your investigation. You should use any of the sources or tools taught in this course, that you deem to be applicable and appropriate. We know that the email address used to register the Twitter account is fake, so do not include this in your report.
 
 Your manager has provided you with the following starting information:
 - Twitter handle used by actor: @sp1ritfyre
@@ -49,53 +49,79 @@ Email Addresses Utilised:
 
 ```
 # Approach
-Do a simple google search on @sp1ritfyre gives us the following results:
+I tried to use what I have learned to complete the OSINT challenge
 
-![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/9f5a54b9-c397-4751-a6f3-88d9214e7332)
+Using the Google search query *allintext:sp1ritfyre* to find web pages where the term "sp1ritfyre" appears in the text content. 
 
-For security, consider using a Virtual Machine (VM) or a VPN before connecting.
+![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/ef3b5c22-e191-4524-8cf3-3c739fe6dcbc)
 
-Open Tor Browser, connect, & paste the following link: [5xdv6dqxv2bsbmlgttsq3ma3nw6ffa2zhqbl7o4w46p32wsqulzrtsqd.onion](5xdv6dqxv2bsbmlgttsq3ma3nw6ffa2zhqbl7o4w46p32wsqulzrtsqd.onion)
-![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/3018f9ae-cc18-4ad8-847d-5094070af929)
+The first two searches look very promising. Clicking on the first one lead to the twitter handler and it can be seen that there was a link encoded with base 64.
 
-Click on "GO TO THE CHALLENGE" to reach the login page:
-![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/e20b7966-65bd-4488-b871-a9168bc290a5)
+![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/c848b0c4-1860-44b2-a44b-2d25e2588582)
 
-Right-click, select "Inspect," navigate to the console, & execute the generateUserCredentials() command:
-![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/38c0ddd1-30f1-4f88-a577-b3f1a7a63ac1)
+I decoded the link via [Cyberchef](https://gchq.github.io/CyberChef/) and obtained a link *redhunt.net*
 
-Get a Base64 encoded string & Lets Decode everything. I used [Cyberchef](https://gchq.github.io/CyberChef/) to decode 
-![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/91ee091b-737e-41ab-a163-181d586f5d0b)
+![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/330b743e-88a5-4843-805a-622b03a7d31c)
 
-Login using the decoded credentials. The content is all hexadecimal encoded!
-![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/27aba7da-ad86-493f-ad5b-3df1bac2ce59)
-It's up tp you if you wanna decode everything 
+However, acessing the decoded link yielded no information regarding the POI. Thus, I proceeded with the second search which leads to the POI's blogpost.
 
-Found the drug dealer's blog hehe (just recognise it via the image lol):
+![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/a7294bac-cdc3-46af-9005-7889eaadd749)
 
-![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/8975410a-b780-42e4-a72c-d4e3f90c372d)
+There were two sections that caught my attention. 
+- Contact me which may consists of POI's email address
+  
+  ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/e1d605fc-1d3f-469e-9113-d7f1ebd811dc)
 
-Scroll down to find the suspect's username:
+- Location which was hexadecimal encoded
 
-![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/c5957841-386e-4ff6-842c-2c87caeeb4b7)
+Decoded the string via [Cyberchef](https://gchq.github.io/CyberChef/) again and obtained https://sammiewoodsec.blogspot.com
 
-Utilize Google Lens or a similar tool for a reverse image search:
-![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/6f53e6a3-01b4-40d9-9545-fa9e79688072)
+![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/bfd7b37d-1b92-4c73-a50d-537420e08f71)
 
-Identify posts indicating the suspect's US citizenship and vacation details:
-![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/c0532bd5-e974-45af-8d65-44c74566d622)
-- Suspect Name: Kestener Richard
-- Location: London, United Kingdom
+Copy paste the link and finally, I founded the POI's blog and her profile.
 
-Explore the last post for coordinates and date:
-![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/ee75c9fd-c348-46e4-b261-8774fc54b9d9)
-- Coordinates: 51° 56' 57.2"N, 1° 19' 26.1"E
-- Date: 31 Oct 20XX
+![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/15effdaf-68d0-40f7-9438-d0d3e4395905)
 
-This approach is sufficient enough to answer all the quiz questions presented in the challenge
-# Tools Used:
-- Google Lens
-- Cyberchef
-- Tor Browser
+![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/e9dcfa01-32cf-4c64-af2e-284809d42f72)
+
+![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/14bc9daa-46fe-4b29-a847-865606648c0e)
+
+I can now confidently answer all the questions. 
+
+**[1] First Name:** Sammie
+
+**[2] Last Name:** Woods
+
+**[3] Age:** 23
+
+**[4] Country:** United Kingdom 
+
+**[5] Interests (5 minimum):** Security, Gaming, Photography, Camping, Malware Analysis
+
+**[6] Hacker's employer (company name):** PhilmanSecurityInc
+
+**[7] Hacker's position within company:** Junior Penetration Tester
+
+**[8] Self-Owned Website (Hacker owns the domain):** https://redhunt.net/
+**[9] Other Websites (Person does not own the domain, such as blogs):** https://sp1ritfyrehackerstories.blogspot.com/ https://sammiewoodsec.blogspot.com/ https://github.com/SammieWoodSec
+
+Evidence Collection:
+=================================
+**[10] Any URLs of webpages that directly tie individual to MSP breach:**
+
+Email Addresses Utilised:
+=================================
+**[11] What email addresses have been used by the hacker?** d1ved33p@gmail.com
+
+
+
+
+
+
+
+
+
+
+
   
 # Thanks for reading!!
