@@ -103,14 +103,11 @@ I can now confidently answer all the questions.
 **[7] Hacker's position within company:** Junior Penetration Tester
 
 **[8] Self-Owned Website (Hacker owns the domain):** https://redhunt.net/
+
 **[9] Other Websites (Person does not own the domain, such as blogs):** https://sp1ritfyrehackerstories.blogspot.com/ https://sammiewoodsec.blogspot.com/ https://github.com/SammieWoodSec
 
-Evidence Collection:
-=================================
 **[10] Any URLs of webpages that directly tie individual to MSP breach:** Not Found
 
-Email Addresses Utilised:
-=================================
 **[11] What email addresses have been used by the hacker?** d1ved33p@gmail.com
 
 
