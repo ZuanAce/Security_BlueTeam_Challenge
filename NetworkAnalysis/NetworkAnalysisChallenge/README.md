@@ -65,4 +65,4 @@ Alexis is a fictional cybersecurity company with thousands of employees. An atta
      ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/3238dca4-f89f-4abd-acb6-7f67d85e4315)
 
 # Thanks for Reading!!
-Completing the Network Analysis course was a significant achievement for me. I faced challenges, particularly because I lacked sufficient networking knowledge. However, the learning experience was incredibly valuable, and I gained a wealth of knowledge. I would enthusiastically recommend this course to beginners who are looking to learn more about networking.
+Completing the Network Analysis course was a significant achievement for me. I faced challenges, particularly because I lacked sufficient hands-on networking knowledge. However, the learning experience was incredibly valuable, and I gained a wealth of knowledge. I would enthusiastically recommend this course to beginners who are looking to learn more about networking.
