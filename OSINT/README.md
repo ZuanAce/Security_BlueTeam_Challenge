@@ -18,6 +18,6 @@ Some of the tools that I used:
 - TinEye
 - Google Image Search
   
-# Learning Resources 📚
+
 
 
