@@ -76,6 +76,7 @@ In this activity you’ll be putting your new TCPDump skills to the test by anal
    - Arrival Time: Feb 10, 2020 19:04:46.207925000 Malay Peninsula Standard Time
    - UTC Arrival Time: Feb 10, 2020 11:04:46.207925000 UTC
    - Converting further to EST gives Feb 10, 2020, at 06:04:46.207925000.
+     
    *NOTES*
     - Converted to EST because the creator of this challenge is from United States
     - EST stands for Eastern Standard Time, which is a time zone used in the United States. It is typically observed in states such as New York, Florida, and parts of the Eastern United States.
