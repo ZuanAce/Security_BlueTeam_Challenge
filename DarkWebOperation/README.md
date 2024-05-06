@@ -43,23 +43,28 @@ We need you to find evidence that will allow us to identify this subject, relate
 10) What is the name of the seaport where the shipment is being delivered?
 ```
 # Approach
-Download Tor Browser from [here](https://www.torproject.org/download/)
+Download Tor Browser from [here](https://www.torproject.org/download/).
 
-For security, consider using a Virtual Machine (VM) or a VPN before connecting.
+For security reasons, consider using a Virtual Machine (VM) or a VPN before connecting.
 
 Open Tor Browser, connect, & paste the following link: [5xdv6dqxv2bsbmlgttsq3ma3nw6ffa2zhqbl7o4w46p32wsqulzrtsqd.onion](5xdv6dqxv2bsbmlgttsq3ma3nw6ffa2zhqbl7o4w46p32wsqulzrtsqd.onion)
+
 ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/3018f9ae-cc18-4ad8-847d-5094070af929)
 
 Click on "GO TO THE CHALLENGE" to reach the login page:
+
 ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/e20b7966-65bd-4488-b871-a9168bc290a5)
 
 Right-click, select "Inspect," navigate to the console, & execute the generateUserCredentials() command:
+
 ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/38c0ddd1-30f1-4f88-a577-b3f1a7a63ac1)
 
-Get a Base64 encoded string & Lets Decode everything. I used [Cyberchef](https://gchq.github.io/CyberChef/) to decode 
+Get a Base64 encoded string & Lets Decode everything. I used [Cyberchef](https://gchq.github.io/CyberChef/) to decode.
+
 ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/91ee091b-737e-41ab-a163-181d586f5d0b)
 
 Login using the decoded credentials. The content is all hexadecimal encoded!
+
 ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/27aba7da-ad86-493f-ad5b-3df1bac2ce59)
 It's up tp you if you wanna decode everything 
 
@@ -72,14 +77,17 @@ Scroll down to find the suspect's username:
 ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/c5957841-386e-4ff6-842c-2c87caeeb4b7)
 
 Utilize Google Lens or a similar tool for a reverse image search:
+
 ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/6f53e6a3-01b4-40d9-9545-fa9e79688072)
 
 Identify posts indicating the suspect's US citizenship and vacation details:
+
 ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/c0532bd5-e974-45af-8d65-44c74566d622)
 - Suspect Name: Kestener Richard
 - Location: London, United Kingdom
 
 Explore the last post for coordinates and date:
+
 ![image](https://github.com/ZuanAce/SecurityBlueTeam_challenge/assets/147037911/ee75c9fd-c348-46e4-b261-8774fc54b9d9)
 - Coordinates: 51° 56' 57.2"N, 1° 19' 26.1"E
 - Date: 31 Oct 20XX
