@@ -1,84 +1,54 @@
 # Introduction
 This section discusses what steganography is and how Steghide can be used to hide or retrieve hidden messages.
 
-# Linux CLI Activity and Quiz
+# Steganography Activity and Quiz
 
 1. Launch kali linux and then download the file.
 2. Unzip the file using the command *unzip filename* replacing the filename with the name of the downloaded file
-3. Navigate to SBT_Linux_CLI-2 using the command *cd SBT_Linux_CLI-2*
+3. Navigate to SBT_Steg_Lab using the command *cd SBT_Steg_Lab*
 
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/ff6de136-4412-4f46-9be6-3f4bd5341f74)
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/818f103f-3eac-477f-89e2-7f1c4fff9547)
 
 4. Use the command *ls -a* to list all files and directories, including hidden ones.
 
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/0a873f86-05dd-4a46-902c-21b724633159)
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/c1811709-db0a-4b52-aae2-13879893b781)
 
-5. The first text file to come across is *asdafada.txt*. Thus, using the command *cat asdafada.txt*. The command *cat* is used to concatenate files and display their contents. The phrase on line 8 of the file is *there's a snake in my boot*.
+5. Run the command *steghide embed -ef secretmessage.txt -cf coverfile.jpg -sf hiddenmessage.jpg* to embed the file *secretmessage.txt* inside the cover file *coverfile.jpg* and name the output stegofile *hiddenmessage.jpg*.
    
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/fa5d9b1c-9adb-41b4-a498-aafccf3e2725)
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/481501c4-8cbd-4d60-9357-14a2dfaed314)
 
-6. Navigate to /Home/PersonalFiles/Photos/ directory using the command *cd Home/PersonalFiles/Photos* and then, use the command *ls -a* to list all the files and directories, including hidden ones. There are *3 image files*.
+6. Navigate to Stego Files using the command *cd 'Stego Files'*. Using the command *ls* to list all the files withing the directory. There are 7 files to be sorted. Luckily, this is not a lot. If we had a huge amount of files to sort through, the StegDetect tool would have been used. It is a tool that detects steganographic content in images.
 
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/0664749d-20d0-4a79-bb3f-5074f78eab79)
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/b025ab81-6973-4ee7-9c76-c51fa2eb98b3)
 
-7. Just to be sure they are image files, run the command *file** to see their file types.
+7. Using the command *steghide extract -sf filename* (replace the desired filename within the directory) to extract the embedded files for the flags. Through trial and error, I was able to find FLAG1.txt within the *pizza.jpg* file using the password *christmastree*. Using the *cat* command, I was able to retrieve the first flag *kAN105KS*.
 
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/21754f8b-133d-4e43-b009-23b69071075f)
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/7141da27-7232-4d08-918a-a6a41c29aa7e)
 
-8. Using the command *cd ..* twice to navigate back to the home directory.
+8. Repeat step 7 to find the remaining flag files. The second flag (*001JDANL*) was found within the *verypretty.jpg* file using the password *darksky123*. The third flag (*1LRBA9IU*) was found within the *car.jpeg* file using the password *goldenwatch*.
 
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/ac8fe11e-a769-4a03-b498-1cd1f9deb236)
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/e4e90a71-33e6-431f-b290-2661fdc47e23)
 
-9. Using the command *ls -a* to list all the files and directories.
-    
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/fa2239d2-973d-49d4-baa9-ad0a63582fbc)
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/f11ee7ec-e7a7-4c6a-a55b-14ff1fe680c2)
 
-10. Using the command *file** to see all the file types within the directory. There are two files with the wrong extension namely *doggo.zip* and *pancakerecipe.txt*.
-    
-    ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/4a59c297-ac4c-4f5e-8dc1-c4527b041db9)
-    
-11. Using the command *mv doggo.zip doggo.jpg* to move the original file to the same location, but change the name to *doggo.jpg*. Same command is applied for *pancakerecipe.txt*.
-
-    ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/c14169fc-a932-4900-8cb9-fe9d4218d9f8)
-    
-    ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/838dbcb4-7b57-463d-8d7e-2d316de1cdbb)
-
-12. Checked both files and noticed the pancakerecipe.png has a secret message in it: SIERRA ECHO CHARLIE ROMEO ECHO TANGO
-
-    ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/19155f80-15b1-4bc6-9d3b-aa6424fefb2f)
-
-13. Navigate to this file path /SBT_Linux_CLI-2/Home/PersonalFiles/WorkStuff a text file that contains the string *bankdetails* can be found
-
-    ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/83ec14b1-4237-487a-9bfe-ea0efe781253)
-
-14. Using the command *ls -a* to list the hidden directories. The hidden directory is *.Private*. Navigate to the hidden directory, and use the *ls -a* command again to list all the files and directories if available. There is a *readme.txt* file. Using the *cat readme.txt* command to display the contents of the txt file. The flag value was found : *106019BAL0S0A1*.
-
-    ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/db64b223-7c84-4c93-9b2e-2fbd7691e68d)
 
 # Answers to the Quiz
-**1. What is the phrase on line 8 of the first text file you come across?**
+**1. Embed the file 'secretmessage.txt' inside the cover file 'coverfile.jpg' and name the output stegofile 'hiddenmessage.jpg'. What is the full command you would use to do this?**
    
-   - *there's a snake in my boot*
+   - *steghide embed -ef secretmessage.txt -cf coverfile.jpg -sf hiddenmessage.jpg*
    
-**2. There are two files with incorrect extensions, what are their filenames? (Without the file extensions, in the format: filename1 filename2**
+**2.  Flag 1 is hidden inside a text file in one of the steganography files. What is the value?**
    
-   - *doggo pancakerecipe*
+   - *kAN105KS*
    
-**3. One of these incorrect extension files hides a message, what is it?**
+**3.  Flag 2 is hidden inside a text file in one of the steganography files. What is the value?**
    
-   - *SIERRA ECHO CHARLIE ROMEO ECHO TANGO*
+   - *001JDANL*
    
-**4. There is a text file with the string "bankdetails" as part of the filename. What is the full filename? (Including file extension)**
+**4.  Flag 3 is hidden inside a text file in one of the steganography files. What is the value?**
    
-   - *11_09_2019_statement_bankdetails.txt*
+   - *1LRBA9IU*
    
-**5. How many images are in the /Home/ directory? (Including files that SHOULD be images, if any)**
-   
-   - *5*
-   
-**6. What is the flag value inside the text file within the hidden directory?**
-   
-   - *106019BAL0S0A1*
 
 
 
