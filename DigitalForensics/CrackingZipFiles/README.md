@@ -7,48 +7,62 @@ This section talks about password-protected files, and how they can be cracked w
 2. Unzip the file using the command *unzip filename* replacing the filename with the name of the downloaded file
 3. Navigate to SBT_Steg_Lab using the command *cd SBT_ZIP_Cracking*
 
-  ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/650c9076-317b-427e-8e4d-ba07fc28a248)
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/650c9076-317b-427e-8e4d-ba07fc28a248)
 
+4. Using the command *fcrackzip -b -u BruteForceAttack.zip* to conduct a bruteforce attack against *BruteForceAttack.zip*. Here's a breakdown what the command mean:
+   - fcrackzip – Selecting the tool we want to use.
+   - -b – Selecting the option for a brute-force attack.
+   - BruteForceAttack.zip – The file we want to brute-force.
+   - -u – This makes sure fcrackzip actually tries to unzip the file, without this we won’t actually get the right password.
 
-5. Use the command *ls -a* to list all files and directories, including hidden ones.
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/78861b16-1a36-45b9-9623-35e60d876416)
 
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/c1811709-db0a-4b52-aae2-13879893b781)
+5. However, the bruteforce attack took so much longer compare to dictionary attack. Using the command *fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u BruteForceAttack.zip*, I was able to retrieve the password: *a1b3c5*
 
-6. Run the command *steghide embed -ef secretmessage.txt -cf coverfile.jpg -sf hiddenmessage.jpg* to embed the file *secretmessage.txt* inside the cover file *coverfile.jpg* and name the output stegofile *hiddenmessage.jpg*.
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/b3c72c02-e979-4a0f-bb58-db3bf4944088)
+
+6. Using the password *a1b3c5* and the command *unzip BruteForceAttack.zip*, FLAG1.txt was extracted.
+
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/6e218ee2-ea1b-4a88-b014-c7b3972656c5)
+
+7. Using the command *cat FLAG1.txt*, the flag value *J201AKKLO* was obtained.
+
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/2fc9f92d-e8ca-4725-b77e-7032d071d96b)
+
+8. Using the command *fcrackzip -D -p /usr/share/wordlists/rockyou.txt -u DictionaryAttack.zip* to conduct a dictionary attack against *DictionaryAttack.zip*. The password is *FRIENDSHIPSTARS*. Here's a breakdown what the command mean:
+   - fcrackzip – Selecting the tool we want to use.
+   - -D – Selecting the option for a dictionary attack
+   - -u – This makes sure fcrackzip actually tries to unzip the file, without this we won’t actually get the right password.
+   - /usr/share/wordlists/rockyou.txt – This is the location of our wordlist, required to perform a dictionary attack.
+   - DictionaryAttack.zip – The file we want to crack.
+     
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/8aace566-b821-44f9-8d6a-8c332b899d76)
+
+9. Using the password *FRIENDSHIPSTARS* and the command *unzip DictionaryAttack.zip*, FLAG2.txt was extracted.
    
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/481501c4-8cbd-4d60-9357-14a2dfaed314)
+   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/e56fc698-ac47-427c-97a0-1d8ee1a1c389)
 
-7. Navigate to Stego Files using the command *cd 'Stego Files'*. Using the command *ls* to list all the files withing the directory. There are 7 files to be sorted. Luckily, this is not a lot. If we had a huge amount of files to sort through, the StegDetect tool would have been used. It is a tool that detects steganographic content in images.
+10. Using the command *cat FLAG2.txt*, the flag value *91MDOQL11* was obtained.
 
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/b025ab81-6973-4ee7-9c76-c51fa2eb98b3)
-
-8. Using the command *steghide extract -sf filename* (replace the desired filename within the directory) to extract the embedded files for the flags. Through trial and error, I was able to find FLAG1.txt within the *pizza.jpg* file using the password *christmastree*. Using the *cat* command, I was able to retrieve the first flag *kAN105KS*.
-
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/7141da27-7232-4d08-918a-a6a41c29aa7e)
-
-9. Repeat step 7 to find the remaining flag files. The second flag (*001JDANL*) was found within the *verypretty.jpg* file using the password *darksky123*. The third flag (*1LRBA9IU*) was found within the *car.jpeg* file using the password *goldenwatch*.
-
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/e4e90a71-33e6-431f-b290-2661fdc47e23)
-
-   ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/f11ee7ec-e7a7-4c6a-a55b-14ff1fe680c2)
+    ![image](https://github.com/ZuanAce/Security_BlueTeam_Challenge/assets/147037911/ee1d8264-282e-42eb-91a1-8b6f2c1fb539)
 
 
 # Answers to the Quiz
-**1. Embed the file 'secretmessage.txt' inside the cover file 'coverfile.jpg' and name the output stegofile 'hiddenmessage.jpg'. What is the full command you would use to do this?**
+**1. What is the working password to unlock BruteForceAttack.zip?**
    
-   - *steghide embed -ef secretmessage.txt -cf coverfile.jpg -sf hiddenmessage.jpg*
+   - *a1b3c5*
    
-**2.  Flag 1 is hidden inside a text file in one of the steganography files. What is the value?**
+**2. What is the working password to unlock DictionaryAttack.zip?**
    
-   - *kAN105KS*
+   - *FRIENDSHIPSTARS*
    
-**3.  Flag 2 is hidden inside a text file in one of the steganography files. What is the value?**
+**3. What is the text string inside FLAG1.txt?**
    
-   - *001JDANL*
+   - *J201AKKLO*
    
-**4.  Flag 3 is hidden inside a text file in one of the steganography files. What is the value?**
+**4. What is the text string inside FLAG2.txt?**
    
-   - *1LRBA9IU*
+   - *91MD0QL11*
 
 # Resources
 - https://medium.com/@rajendraprasanth/password-cracking-using-kali-67e0b89578df
