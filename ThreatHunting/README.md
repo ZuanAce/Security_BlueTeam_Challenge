@@ -1,28 +1,26 @@
-# Introduction to Vulnerability Management Course 🔍
-The Threat Hunting course focuses on a specialized role known as the purple team. This role is all about finding advanced threats that are already in the network but haven't been noticed yet. Threat Hunters use a mix of manual and automated methods to search for bad stuff on networks and computers. It's a highly technical job that keeps changing because bad guys change how they work. Hunters have to keep coming up with new ways to find signs of threats that regular security tools might miss.
+# Introduction to Threat Hunting Course 🔍
+The Threat Hunting course delves into the specialized role of the purple team, focusing on identifying advanced threats within networks that have gone unnoticed. Threat Hunters employ a blend of manual and automated techniques to detect malicious activity on networks and devices. This role is highly technical and dynamic, evolving alongside changes in adversarial tactics.
 
 # Course Overview 📚
 Course Objectives:
-- 📌 Learn about threat hunting fundamentals
-- 🎯 Understanding Indicators of Compromise (IOC) and Use Suitable tools to generate IOCs
-- Learn about malware hunting
-- 🛠️ Gain practical skills in threat hunting
+- 📌 Understand the fundamentals of threat hunting
+- 🎯 Learn about Indicators of Compromise (IOCs) and how to generate them using suitable tools
+- 🦠 Explore malware hunting techniques
+- 🛠️ Develop practical skills in threat hunting
 
 # Practical Challenges 🧩
-In this course, you'll tackle hands-on challenges to reinforce your learning:
-- GENERATING INDICATORS OF COMPROMISE
-- HUNTING FOR FILES
-- COURSE CHALLENGE: MALWARE THREAT HUNT
+- 🚩 Generating Indicators of Compromise
+- 🔍 Hunting for Suspicious Files
+- 🏆 Course Challenge: Malware Threat Hunt
 
 # Tools Covered 🛠️
-Get familiar with these essential tools:
 - 💻 Mandiant IOC Collector
-- MD5 Hashing
-- SHA-1 Hashing
-- Strings
-- File Properties
-- Mandiant Redline
-- Virtual Machines
+- 🔍 MD5 Hashing
+- 🔍 SHA-1 Hashing
+- 🔍 Strings Analysis
+- 📂 File Properties Examination
+- 🛡️ Mandiant Redline
+- 💻 Virtual Machines
 
 # Resources
 
